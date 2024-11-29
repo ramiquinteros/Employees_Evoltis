@@ -64,7 +64,7 @@ namespace Employee.UI
                 lblMessage.Text = "Empleado actualizado correctamente.";
                 lblMessage.Visible = true;
 
-                Response.Redirect("~/Default.aspx");
+                Response.Redirect("~/EmployeeList.aspx");
             }
             catch (Exception ex)
             {
