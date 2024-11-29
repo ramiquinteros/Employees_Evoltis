@@ -4,8 +4,8 @@
 
 Antes de comenzar, asegúrate de tener los siguientes programas instalados en tu máquina:
 
-- **.NET Framework 4.7** (viene preinstalado en Windows 10 y versiones posteriores, si no lo tienes, puedes obtenerlo desde [aquí](https://dotnet.microsoft.com/download/dotnet-framework)).
-- **Visual Studio 2017** o superior (se recomienda usar Visual Studio con el soporte para desarrollo de aplicaciones WebForms).
+- **.NET Framework 4.7** (viene preinstalado en Windows 10 y versiones posteriores).
+- **Visual Studio**
 - **SQL Server**
   
 ## Instalación
