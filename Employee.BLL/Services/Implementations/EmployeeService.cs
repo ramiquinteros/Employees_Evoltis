@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
 using Employee.Entity;
+using Employee.BLL.Factory;
+using Employee.DAL.Factory;
 
 namespace Employee.BLL.Services
 {
-    public class EmployeeService
+    public class EmployeeService : IEmployeeService
     {
-        readonly EmployeeRepository _employeeRepository = new EmployeeRepository();
+        readonly IEmployeeRepository _employeeRepository = RepositoryFactory.CreateEmployeeRepository();
 
         public async Task<EmployeeEntity> GetEmployeeById(int id)
         {
@@ -41,11 +43,11 @@ namespace Employee.BLL.Services
             }
         }
 
-        public async Task CreateEmployee(EmployeeEntity employee)
+        public async Task<EmployeeEntity> CreateEmployee(EmployeeEntity employee)
         {
             try
             {
-                await _employeeRepository.Create(employee);
+                return await _employeeRepository.Create(employee);
             }
             catch (Exception ex)
             {

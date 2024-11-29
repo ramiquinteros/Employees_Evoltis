@@ -6,7 +6,7 @@ using Employee.Entity;
 
 namespace Employee.DAL.Repositories
 {
-    public class EmployeeRepository 
+    public class EmployeeRepository : IEmployeeRepository
     {
         readonly DataContext _context = new DataContext();
 
@@ -20,10 +20,12 @@ namespace Employee.DAL.Repositories
             return await _context.Employees.ToListAsync();
         }
 
-        public async Task Create(EmployeeEntity employee)
+        public async Task<EmployeeEntity> Create(EmployeeEntity entity)
         {
-            _context.Employees.Add(employee);
-            await _context.SaveChangesAsync(); 
+            var employee = _context.Employees.Add(entity);
+            await _context.SaveChangesAsync();
+            
+            return employee;
         }
 
         public async Task<bool> Delete(int id)

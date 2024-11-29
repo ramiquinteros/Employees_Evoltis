@@ -50,7 +50,7 @@
                     </div>
                     <!-- Tabla con Bootstrap -->
                     <asp:GridView ID="gvEmployees" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped mt-2"
-                                  OnRowCommand="gvEmployees_RowCommand" EmptyDataText="No employees found">
+                                  OnRowCommand="GvEmployees_RowCommand" EmptyDataText="No employees found">
                         <Columns>
                             <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
                             <asp:BoundField DataField="Name" HeaderText="Nombre" SortExpression="Name" />
@@ -68,7 +68,7 @@
                     </asp:GridView>
                 </div>
             </div>
-              <asp:Label ID="lblErrorMessage" runat="server" CssClass="alert alert-dismissible fade show alert-top-right" role="alert" Visible="false"></asp:Label>
+              <asp:Label ID="lblErrorMessage" runat="server" CssClass="alert alert-dismissible fade show alert-top-right" role="alert"></asp:Label>
         </div>
 
         <!-- Modal Crear Empleado -->
@@ -92,7 +92,6 @@
                   <div class="mb-3">
                     <label for="txtEmail" class="form-label">Correo Electrónico</label>
                     <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Ingrese el correo"></asp:TextBox>
-                    
                   </div>
                   <div class="mb-3">
                     <label for="txtSalary" class="form-label">Salario</label>
