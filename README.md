@@ -14,7 +14,7 @@ Antes de comenzar, asegúrate de tener los siguientes programas instalados en tu
    
    Si aún no lo has hecho, puedes clonar este repositorio usando Git:
    
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone [https://github.com/tu_usuario/tu_repositorio.git](https://github.com/ramiquinteros/Employees_Evoltis.git)
 
 ### 2. **Configurar cadena de conexion a DB**:
      ir a Web.Config y cambiar el Server a local:
