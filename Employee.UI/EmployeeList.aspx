@@ -1,10 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Employee.UI.Pages.Default" Async="true" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EmployeeList.aspx.cs" Inherits="Employee.UI.Pages.Default" Async="true" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Employee List</title>
-    <!-- Bootstrap CSS -->
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
@@ -30,15 +29,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-primary text-center mb-4">Employee List</h2>
+                    <h2 class="text-primary text-center mb-4">Lista de Empleados</h2>
                 </div>
                 <div class="col-md-12 text-right mb-3">
                     <asp:Label ID="lblMessage" runat="server" ForeColor="Green" Visible="false"></asp:Label>
-                    <!-- Botón para abrir modal -->
                     <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#CreateEmployee">
                         <i class="fa fa-plus"></i> Crear
                     </button>
-                    <!-- Botón para eliminar -->
                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#DeleteEmployee">
                         <i class="fa fa-plus"></i> Eliminar
                     </button>
@@ -48,7 +45,6 @@
                         <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" placeholder="Buscar por nombre"></asp:TextBox>
                         <asp:Button ID="btnSearch" runat="server" CssClass="btn btn-primary" Text="Buscar" OnClick="Search_Employees"/>
                     </div>
-                    <!-- Tabla con Bootstrap -->
                     <asp:GridView ID="gvEmployees" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped mt-2"
                                   OnRowCommand="GvEmployees_RowCommand" EmptyDataText="No employees found">
                         <Columns>
@@ -71,7 +67,6 @@
               <asp:Label ID="lblErrorMessage" runat="server" CssClass="alert alert-dismissible fade show alert-top-right" role="alert"></asp:Label>
         </div>
 
-        <!-- Modal Crear Empleado -->
        <div class="modal fade" id="CreateEmployee" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -107,7 +102,6 @@
           </div>
         </div>
 
-        <!-- Modal Eliminar Empleado -->
         <div class="modal fade" id="DeleteEmployee" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
